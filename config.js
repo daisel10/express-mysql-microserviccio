@@ -12,10 +12,11 @@ const configEnv= {
         secret: process.env.JWT_SECRET || 'notasecret!',
     },
     mysql: {
-        host: process.env.MYSQL_HOST || 'Mysql@ocalhost:3306',
+        host: process.env.MYSQL_HOST || 'localhost',
+        port: process.env.MYSQL_HOST || 3306,
         user: process.env.MYSQL_USER || 'root',
         password: process.env.MYSQL_PASS || '123456789',
-        database: process.env.MYSQL_DB || 'holamundo',
+        database: process.env.MYSQL_DB || 'users',
     },
     mysqlService: {
         host: process.env.MYSQL_SRV_HOST || 'localhost',
