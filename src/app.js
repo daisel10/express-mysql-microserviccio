@@ -19,8 +19,8 @@ app.get('/ping', async (req,res,next) =>{
     next()
     
   }
-  
 })
+
 app.use('/users', user);
 
 app.use((req, res, next) => {
