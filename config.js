@@ -15,12 +15,8 @@ const configEnv= {
         host: process.env.MYSQL_HOST || 'localhost',
         port: process.env.MYSQL_HOST || 3306,
         user: process.env.MYSQL_USER || 'root',
-        password: process.env.MYSQL_PASS || '123456789',
-        database: process.env.MYSQL_DB || 'users',
-    },
-    mysqlService: {
-        host: process.env.MYSQL_SRV_HOST || 'localhost',
-        port: process.env.MYSQL_SRV_PORT || 1001,
+        password: process.env.MYSQL_PASS || 'my-admit',
+        database: process.env.MYSQL_DATABASE || 'users'
     }
 }
 export default configEnv;

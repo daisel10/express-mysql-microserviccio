@@ -11,7 +11,7 @@ CREATE TABLE user (
 
 DESCRIBE user;
 
-INSERT INTO user values 
+INSERT INTO user (name, password) VALUES
   ('Ryan Ray', '123456789'),
   ('Joe McMillan', '123456789'),
   ('John Carter', '123456789');

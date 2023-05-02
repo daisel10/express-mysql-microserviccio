@@ -1,25 +1,19 @@
 import {pool} from './mysql.js';
 
-export async function getUsers(){
-    try {
-        return await pool.query("SELECT * FROM employee");
-    } catch (error) {
-        return error
-    }
+export async function getUsersdb(){
+        return await pool.query("SELECT * FROM user");
+    
 }
 
-export async function register( name, password ){
-    try {
-        return await pool.query("INSERT INTO employee (name, password) VALUES (?, ?)",[name, password]);
-
-    } catch (error) {
-        return error
-    }
+export async function registerdb( name, password ){
+        // INSERT INTO user (name, password) VALUES ('Ryan Ray', '123456789')
+        return await pool.query(`INSERT INTO user (name, password) VALUES ('${name}', '${password}');`);
 }
 
-export async function login(){
+export async function logindb(name){
     try {
-        
+
+        return await pool.query(`SELECT * FROM user WHERE name= '${name}';`);
     } catch (error) {
         return error
     }
