@@ -5,7 +5,7 @@
   "main": "src/bin/www.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/bin/www.js",
+    "dev": "cross-env API_PORT=2000 nodemon  src/bin/www.js",
     "start": "node src/bin/www.js"
   },
   "devDependencies": {
